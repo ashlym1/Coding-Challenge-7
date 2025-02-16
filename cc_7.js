@@ -76,11 +76,18 @@ console.log(calculateLoanInterest(5000, 0.07, 5)); // Expected output: "Total In
 console.log (filterHighValueTransactions(transactions, amount => amount > 1000)); // Expected output: [1200, 3000, 2200]
 
 //Task 7 : Closure 
+function createBudgetTracker() { 
+    let balnace= 0 ; // the initial balence will start at 0 
+    return function (expense) {  
+        balance-= expense ; // subtracting the expenses from the balance 
+        return `Current Balance : $$ { balance.toFized(2)}`; 
+    };
+}
+// A new budget tracker, which will hopefully will keep  track of the  expenses 
+let budget = createBudgetTracker();
 
-
-
-
-
-
+// Test Data: 
+console.log(budget(300));// Expected output: "Current Balance: -$300"
+console.log(budget(200));// Expected output: "Current Balance: -$500"
 
 // Task 8 : Recursion in Java script 
