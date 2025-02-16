@@ -14,7 +14,7 @@ const calculateHourlyWage = function (salary, hoursPerWeek) {
 //divide by the total of hrs to find hourly wage 
 let hourlyWage= salary / totalHoursPaperYear;
 // returning the formatted hr wage 
-return `Hourly Wage: $$ { hourlyWage.toFixed(2)}`;
+return `Hourly Wage: $${ hourlyWage.toFixed(2)}`;
 };
 // Test Data
 console.log(calculateHourlyWage(52000, 40)); // Expected Output: "Hourly Wage: $25.00"
@@ -26,7 +26,7 @@ const calculateLoyaltyDiscount = (amount,years)=>{
     let discountRate= years >= 5 ? 0.15: years >= 3? 0.10 : 0.05;
     //applying the discount to the original amount 
     let discountedPrice=amount * (1-discountRate);
-    //returning the final price after dicount; the "tofixed" is to format to the 2nds decimal place )
+   return `Discounted Price :$${discountedPrice.toFixed(2)}`; //returning the final price 
 };
 //  Test data 
 console.log(calculateLoyaltyDiscount(100, 6)); // Expected Output: "Discounted Price: $85.00"
@@ -35,6 +35,7 @@ console.log(calculateLoyaltyDiscount(200, 2)); // Expected Output: "Discounted P
 //Task 4 -  Parameters and Arguments 
 function calculateShippingCost  (weight, location, expedited = false) { 
     // The cost depends on where the order is shipped to 
+    let baseCost = 0; 
     if (location === "USA") {
         baseCost = 5 + (0.5 * weight); // USA shipping fees 
     } else if (location === "Canada") {
@@ -59,7 +60,7 @@ console.log(calculateShippingCost(5, "Canada", false)); // Expected Output: "Shi
     //calculating the total interest by multiplying the principal with the rate and yrs
     let interest = principal * rate*years;
     // Returning the interest and formating it to the 2nd decimal place
-    return `Total Interest: $$ { interets.toFixed (2) }`;
+    return `Total Interest: $${ interets.toFixed (2)}`;
  };
 // Test Data : 
 console.log(calculateLoanInterest(1000, 0.05, 3)); // Expected output: "Total Interest: $150.00"
@@ -77,10 +78,10 @@ console.log (filterHighValueTransactions(transactions, amount => amount > 1000))
 
 //Task 7 : Closure 
 function createBudgetTracker() { 
-    let balnace= 0 ; // the initial balence will start at 0 
+    let balance= 0 ; // the initial balence will start at 0 
     return function (expense) {  
         balance-= expense ; // subtracting the expenses from the balance 
-        return `Current Balance : $$ { balance.toFized(2)}`; 
+        return `Current Balance : $${ balance.toFized(2)}`; 
     };
 }
 // A new budget tracker, which will hopefully will keep  track of the  expenses 
