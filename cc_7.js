@@ -91,3 +91,14 @@ console.log(budget(300));// Expected output: "Current Balance: -$300"
 console.log(budget(200));// Expected output: "Current Balance: -$500"
 
 // Task 8 : Recursion in Java script 
+function calculateGrowth(years, revenue) {
+    // Each year it will increase revenue by 5 % until it reaching 10yr
+    if (years >= 10) {
+        return `Projected Revenue: $${revenue.toFixed(2)}`;
+    }
+    // Increase revenue by 5% each year
+    return calculateGrowth(years + 1, revenue * 1.05);
+}
+// Test Data 
+console.log(calculateGrowth(8, 1000)); // Expected output: "Projected Revenue: $1102.50"
+console.log(calculateGrowth(5, 5000)); // Expected output: "Projected Revenue: $6381.41")
