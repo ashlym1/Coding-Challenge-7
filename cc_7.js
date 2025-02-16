@@ -53,4 +53,3 @@ function calculateShippingCost  (weight, location, expedited = false) {
 // Test Data 
 console.log(calculateShippingCost(10, "USA", true)); // Expected Output: "Shipping Cost: $20.00"
 console.log(calculateShippingCost(5, "Canada", false)); // Expected Output: "Shipping Cost: $13.50"
-console.log(calculateShippingCost(8, "Mexico", true)); // Expected Output: "Invalid location"
