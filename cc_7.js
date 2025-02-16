@@ -60,7 +60,7 @@ console.log(calculateShippingCost(5, "Canada", false)); // Expected Output: "Shi
     //calculating the total interest by multiplying the principal with the rate and yrs
     let interest = principal * rate*years;
     // Returning the interest and formating it to the 2nd decimal place
-    return `Total Interest: $${ interets.toFixed (2)}`;
+    return `Total Interest: $${ interest.toFixed (2)}`;
  };
 // Test Data : 
 console.log(calculateLoanInterest(1000, 0.05, 3)); // Expected output: "Total Interest: $150.00"
@@ -81,7 +81,7 @@ function createBudgetTracker() {
     let balance= 0 ; // the initial balence will start at 0 
     return function (expense) {  
         balance-= expense ; // subtracting the expenses from the balance 
-        return `Current Balance : $${ balance.toFized(2)}`; 
+        return `Current Balance : $${balance.toFixed(2)}`; 
     };
 }
 // A new budget tracker, which will hopefully will keep  track of the  expenses 
